@@ -1,0 +1,19 @@
+<div class="body" style="border: 1px solid green">
+  <div class="entryBox">
+    Full Name:
+    <input #person type="text" />
+  </div>
+  <div class="entryBox">
+    Gift Entry:
+    <input #item type="text" />
+  </div>
+  <div class="entryBox">
+      Email Entry:
+      <input #email type="text" />
+    </div>
+  <div class="submit">
+    <button type="btnSubmit" (click)="kickback(item.value, person.value)">Send List</button>  
+    <h1>{{gift}}</h1>
+  </div>
+</div>
+
