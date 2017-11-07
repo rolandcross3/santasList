@@ -1,14 +1,15 @@
 import { Component, OnInit, Input } from '@angular/core';
+import { Gift } from '../models/index';
 
 @Component({
-  selector: 'app-gifts-detail',
+  selector: 'gifts-detail',
   templateUrl: './gifts-detail.component.html',
   styleUrls: ['./gifts-detail.component.css']
 })
 export class GiftsDetailComponent implements OnInit {
-  
-  @Input() gifts: String[];
-  
+
+  @Input() gifts: Gift[];
+
   constructor() { }
 
   ngOnInit() {
