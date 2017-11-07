@@ -1,3 +1,4 @@
-<h1>{{title}}</h1>
+<h1>{{ title }}</h1>
+<h4>{{ daysLeft$ | async }}</h4>
 <gifts-entry (giftOutput)="getGift($event)"></gifts-entry>
 <gifts-detail [gifts]="allGifts"></gifts-detail>
