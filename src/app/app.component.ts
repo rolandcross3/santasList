@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Gift } from './models/index';
 
 @Component({
   selector: 'app-root',
@@ -8,10 +9,11 @@ import { Component } from '@angular/core';
 export class AppComponent {
   title = 'Santa\'s List';
   currentGift= '';
-  allGifts = [];
+  allGifts: Gift[] = [];
 
-  getGift(g: string) {
-    this.allGifts.push(g);
+  getGift(g: Gift) {
+    this.allGifts = [g, ...this.allGifts];
+    console.log(this.allGifts);
     debugger;
   }
 }

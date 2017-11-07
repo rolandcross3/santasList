@@ -1,7 +1,7 @@
 <div class="body" style="border: 1px solid green">
   <div class="entryBox">
     Full Name:
-    <input #person type="text" />
+    <input #recipient type="text" />
   </div>
   <div class="entryBox">
     Gift Entry:
@@ -12,8 +12,7 @@
       <input #email type="text" />
     </div>
   <div class="submit">
-    <button type="btnSubmit" (click)="kickback(item.value, person.value)">Send List</button>  
-    <h1>{{gift}}</h1>
+    <button type="btnSubmit" (click)="kickback(item.value, recipient.value)">Send List</button>  
   </div>
 </div>
 
