@@ -11,11 +11,13 @@ export class GiftsEntryComponent {
   @Output() giftOutput: EventEmitter<any> = new EventEmitter<any>();
   gift: Gift;
 
-  kickback(i: string, r: string) {
+  kickback(i: string, r: string, q:number) {
     debugger;
     this.gift = {
       recipient: r,
-      item: i
+      item: i,
+      quantity: q
+
     };
     this.giftOutput.emit(this.gift);
 

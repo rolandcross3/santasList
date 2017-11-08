@@ -1,18 +1,29 @@
-<div class="body" style="border: 1px solid green">
-  <div class="entryBox">
-    Full Name:
-    <input #recipient type="text" />
+<div class="w-100">
+      <div class="tableRow">
+        <div class="tableCell">
+            <h3 class="f3 measure-narrow">Full Name:</h3>
+        </div>
+        <div class="tableCell">
+            <input class="borderRadius" #recipient type="text" />
+        </div>
+      </div>
+      <div class="tableRow">
+          <div class="tableCell"> 
+              <h3 class="f3 measure-narrow">Gift Name:</h3>
+          </div>
+          <div class="tableCell"> 
+              <input class="borderRadius" #item type="text" />
+          </div>
+          <div class="tableCell">
+              <h3 class="f3 measure-narrow">Qty:</h3>
+          </div>
+          <div class="tableCell">
+              <input class="borderRadius" style="width: 40px;" #quantity type="text" />
+          </div>
+      </div>  
+    <div class="buttons">
+        <a class="f6 link dim ba bw2 ph3 pv2 mb2 dib black" type="btnAddGift" href="#0">Add Gift</a> 
+        <a class="f6 link dim ba bw2 ph3 pv2 mb2 dib black" type="btnSubmit" (click)="kickback(item.value, recipient.value, quantity.value)" href="#0">Send List</a>  
+      </div>
   </div>
-  <div class="entryBox">
-    Gift Entry:
-    <input #item type="text" />
-  </div>
-  <div class="entryBox">
-      Email Entry:
-      <input #email type="text" />
-    </div>
-  <div class="submit">
-    <button type="btnSubmit" (click)="kickback(item.value, recipient.value)">Send List</button>  
-  </div>
-</div>
 
