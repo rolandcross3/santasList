@@ -17,8 +17,8 @@ export class GiftsEntryComponent {
       recipient: r,
       item: i,
       quantity: q
-
     };
+
     this.giftOutput.emit(this.gift);
 
   }
