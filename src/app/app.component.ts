@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Gift } from './models/index';
+import { Gift } from './gifts/models/index';
 import { Observable } from 'rxjs/observable';
 
 @Component({

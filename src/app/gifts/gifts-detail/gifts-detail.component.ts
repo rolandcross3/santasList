@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { Gift } from '../models/index';
 
 @Component({
@@ -7,8 +7,6 @@ import { Gift } from '../models/index';
   styleUrls: ['./gifts-detail.component.css']
 })
 export class GiftsDetailComponent implements OnInit {
-
-  @Input() gifts: Gift[];
 
   constructor() { }
 
