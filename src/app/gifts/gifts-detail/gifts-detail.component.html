@@ -1,5 +1,9 @@
-<div class="bg-blue w-100">
+<div>
 <ul>
-  <li *ngFor="let gift of gifts">{{ gift.recipient }} -- {{ gift.item }} -- {{ gift.quantity}}</li>
+  <li *ngFor="let gift of (allGifts$ | async)">{{gift.recipient}}
+    <ul>
+      <li *ngFor="let item of gift.items">{{item}}</li>
+    </ul>
+  </li>
 </ul>
 </div>

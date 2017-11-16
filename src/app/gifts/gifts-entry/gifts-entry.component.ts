@@ -16,16 +16,11 @@ export class GiftsEntryComponent {
   constructor(private store: Store<State>) { }
 
   addGift(r: HTMLInputElement, i: HTMLInputElement) {
-    this.store.dispatch(new actions.AddGift());
+    this.gift = {
+      recipient: r.value,
+      items: [i.value]
+    };
 
-
-    // debugger;
-    // this.gift = {
-    //   recipient: r,
-    //   items: [i],
-    // };
-
-    // this.giftOutput.emit(this.gift);
-
+    this.store.dispatch(new actions.AddGift(this.gift));
   }
 }

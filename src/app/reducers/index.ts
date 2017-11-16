@@ -1,4 +1,4 @@
-import { ActionReducerMap } from '@ngrx/store';
+import { ActionReducerMap, createSelector } from '@ngrx/store';
 import * as gifts from './gift-reducer';
 
 export interface State {
@@ -8,3 +8,7 @@ export interface State {
 export const reducers: ActionReducerMap<State> = {
     giftState: gifts.giftReducer
 };
+
+const selectGiftBranch = (state: State) => state.giftState;
+
+export const selectAllGifts = createSelector(selectGiftBranch, b => b.ids.map(i => b.entities[i]));

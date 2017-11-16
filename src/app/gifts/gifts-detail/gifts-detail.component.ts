@@ -1,5 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { Gift } from '../models/index';
+import { Observable } from 'rxjs/Observable';
+import { State, selectAllGifts } from '../../reducers/index';
+import { Store } from '@ngrx/store';
 
 @Component({
   selector: 'gifts-detail',
@@ -8,9 +11,11 @@ import { Gift } from '../models/index';
 })
 export class GiftsDetailComponent implements OnInit {
 
-  constructor() { }
+  allGifts$: Observable<any>;
+  constructor(private store: Store<State>) { }
 
   ngOnInit() {
+    this.allGifts$ = this.store.select(selectAllGifts);
   }
 
 }

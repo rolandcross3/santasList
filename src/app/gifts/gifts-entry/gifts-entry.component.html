@@ -1,28 +1,7 @@
-<div class="w-100">
-      <div class="tableRow">
-        <div class="tableCell">
-            <h3 class="f3 measure-narrow">Full Name:</h3>
-        </div>
-        <div class="tableCell">
-            <input class="borderRadius" #recipient type="text" />
-        </div>
-      </div>
-      <div class="tableRow">
-          <div class="tableCell"> 
-              <h3 class="f3 measure-narrow">Gift Name:</h3>
-          </div>
-          <div class="tableCell"> 
-              <input class="borderRadius" #item type="text" />
-          </div>
-          <div class="tableCell">
-              <h3 class="f3 measure-narrow">Qty:</h3>
-          </div>
-          <div class="tableCell">
-              <input class="borderRadius" style="width: 40px;" #quantity type="text" />
-          </div>
-      </div>  
-    <div class="buttons">
-        <!--<a class="f6 link dim ba bw2 ph3 pv2 mb2 dib black" type="btnAddGift" href="#0">Add Gift</a>-->
-        <a class="f6 link dim ba bw2 ph3 pv2 mb2 dib black" type="btnSubmit" (click)="addGift(recipient, item)" href="#0">Send List</a>  
-      </div>
-  </div>
+<label for="recipient">whozit for?</label>
+<input class="borderRadius" #recipient type="text" />
+
+<label for="item">whatcha getnum?</label>
+<input class="borderRadius" #item type="text" />
+
+<a class="f6 link dim ba bw2 ph2 mb2 dib dark-red br-100" type="button" (click)="addGift(recipient, item)">add gift</a>
