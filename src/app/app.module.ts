@@ -2,8 +2,11 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
-import { GiftsEntryComponent } from './gifts-entry/gifts-entry.component';
-import { GiftsDetailComponent } from './gifts-detail/gifts-detail.component';
+import { GiftsEntryComponent } from './gifts/gifts-entry/gifts-entry.component';
+import { GiftsDetailComponent } from './gifts/gifts-detail/gifts-detail.component';
+import { StoreModule } from '@ngrx/store/';
+import { StoreDevtoolsModule } from '@ngrx/store-devtools';
+import { reducers } from './reducers/index';
 
 @NgModule({
   declarations: [
@@ -12,7 +15,9 @@ import { GiftsDetailComponent } from './gifts-detail/gifts-detail.component';
     GiftsDetailComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    StoreModule.forRoot(reducers),
+    StoreDevtoolsModule.instrument()
   ],
   providers: [],
   bootstrap: [AppComponent]

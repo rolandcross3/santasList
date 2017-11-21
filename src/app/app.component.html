@@ -1,4 +1,10 @@
-<h1 class="f-headline lh-solid" style="text-align: center;">{{title}}</h1>
-<h4>{{ daysLeft$ | async }}</h4>
-<gifts-entry (giftOutput)="getGift($event)"></gifts-entry>
-<gifts-detail [gifts]="allGifts"></gifts-detail>
+<div class="dt w-90 pa2 center" >
+    <header class="tc bg-red pv3">
+        <h1>{{ title }}</h1>
+        <h4>{{ daysLeft$ | async }}</h4>
+    </header>
+    <div class="bg-light-green" >
+        <gifts-entry></gifts-entry>
+        <gifts-detail></gifts-detail>
+    </div>
+</div>

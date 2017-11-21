@@ -1,5 +1,10 @@
 /* You can add global styles to this file, and also import other style files */
-.tableRow {display: table-row}
-.tableCell {display:table-cell; padding: 5px;}
-.borderRadius { border-radius: 3px;}
-.buttons { padding: 5px;}
+* {
+    font-family: -apple-system, BlinkMacSystemFont,
+                 'avenir next', avenir,
+                 helvetica, 'helvetica neue',
+                 ubuntu,
+                 roboto, noto,
+                 'segoe ui', arial,
+                 sans-serif;
+  }
